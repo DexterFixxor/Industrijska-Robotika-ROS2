@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "Dockerfile": "dockerfile",
+        "string": "cpp",
+        "chrono": "cpp"
+    }
+}
