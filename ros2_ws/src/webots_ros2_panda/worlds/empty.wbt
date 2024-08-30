@@ -1,0 +1,22 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/Panda.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.23579499234296974 -0.3420797441745169 -0.9096055025182489 4.539751975670894
+  position 0.32712615818622415 -1.743960891453397 1.796384477026738
+}
+DirectionalLight {
+}
+TexturedBackground {
+}
+RectangleArena {
+  floorSize 3 3
+}
+Panda {
+  controller "<extern>"
+}

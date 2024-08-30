@@ -1,0 +1,352 @@
+#VRML_SIM R2023b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the Panda
+# Extracted from: /home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/panda.urdf
+
+PROTO Panda [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "Panda"  # Is `Robot.name`.
+  field  SFString    controller      "void"   # Is `Robot.controller`.
+  field  MFString    controllerArgs  []       # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""       # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE    # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE     # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE    # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      Solid {
+        children [
+          DEF link0_visual CadShape {
+            url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/visual/link0.dae"
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000000 0.000000 1.000000
+              anchor 0.000000 0.000000 0.333000
+            }
+            device [
+              RotationalMotor {
+                name "panda_joint1"
+                maxVelocity 2.3925
+                minPosition -2.9671
+                maxPosition 2.9671
+                maxTorque 87.0
+              }
+              PositionSensor {
+                name "panda_joint1_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.000000 0.000000 0.333000
+              children [
+                DEF link1_visual CadShape {
+                  url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/visual/link1.dae"
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0.000000 1.000000 0.000000
+                  }
+                  device [
+                    RotationalMotor {
+                      name "panda_joint2"
+                      maxVelocity 2.3925
+                      minPosition -1.8326
+                      maxPosition 1.8326
+                      maxTorque 87.0
+                    }
+                    PositionSensor {
+                      name "panda_joint2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    rotation -1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF link2_visual CadShape {
+                        url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/visual/link2.dae"
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0.000000 -1.000000 0.000000
+                          anchor 0.000000 -0.316000 0.000000
+                        }
+                        device [
+                          RotationalMotor {
+                            name "panda_joint3"
+                            maxVelocity 2.3925
+                            minPosition -2.9671
+                            maxPosition 2.9671
+                            maxTorque 87.0
+                          }
+                          PositionSensor {
+                            name "panda_joint3_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 0.000000 -0.316000 0.000000
+                          rotation 1.000000 0.000000 0.000000 1.570796
+                          children [
+                            DEF link3_visual CadShape {
+                              url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/visual/link3.dae"
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0.000000 -1.000000 0.000000
+                                anchor 0.082500 0.000000 0.000000
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "panda_joint4"
+                                  maxVelocity 2.3925
+                                  minPosition -3.1416
+                                  maxPosition 0.0873
+                                  maxTorque 87.0
+                                }
+                                PositionSensor {
+                                  name "panda_joint4_sensor"
+                                }
+                              ]
+                              endPoint Solid {
+                                translation 0.082500 0.000000 0.000000
+                                rotation 1.000000 0.000000 0.000000 1.570796
+                                children [
+                                  DEF link4_visual CadShape {
+                                    url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/visual/link4.dae"
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 0.000000 1.000000 0.000000
+                                      anchor -0.082500 0.384000 0.000000
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "panda_joint5"
+                                        maxVelocity 2.871
+                                        minPosition -2.9671
+                                        maxPosition 2.9671
+                                        maxTorque 12.0
+                                      }
+                                      PositionSensor {
+                                        name "panda_joint5_sensor"
+                                      }
+                                    ]
+                                    endPoint Solid {
+                                      translation -0.082500 0.384000 0.000000
+                                      rotation -1.000000 0.000000 0.000000 1.570796
+                                      children [
+                                        DEF link5_visual CadShape {
+                                          url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/visual/link5.dae"
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.000000 -1.000000 0.000000
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "panda_joint6"
+                                              maxVelocity 2.871
+                                              minPosition -0.0873
+                                              maxPosition 3.8223
+                                              maxTorque 12.0
+                                            }
+                                            PositionSensor {
+                                              name "panda_joint6_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            rotation 1.000000 0.000000 0.000000 1.570796
+                                            children [
+                                              DEF link6_visual CadShape {
+                                                url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/visual/link6.dae"
+                                              }
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.000000 -1.000000 0.000000
+                                                  anchor 0.088000 0.000000 0.000000
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "panda_joint7"
+                                                    maxVelocity 2.871
+                                                    minPosition -2.9671
+                                                    maxPosition 2.9671
+                                                    maxTorque 12.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "panda_joint7_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.088000 0.000000 0.000000
+                                                  rotation 1.000000 0.000000 0.000000 1.570796
+                                                  children [
+                                                    DEF link7_visual CadShape {
+                                                      url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/visual/link7.dae"
+                                                    }
+                                                    Solid {
+                                                      translation 0.000000 0.000000 0.107000
+                                                      rotation 0.000000 0.000000 -1.000000 0.785398
+                                                      children [
+                                                        DEF hand_visual CadShape {
+                                                          url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/visual/hand.dae"
+                                                        }
+                                                        SliderJoint {
+                                                          jointParameters JointParameters {
+                                                            axis 0.000000 1.000000 0.000000
+                                                          }
+                                                          device [
+                                                            LinearMotor {
+                                                              name "panda_finger::left"
+                                                              maxVelocity 0.2
+                                                              maxPosition 0.04
+                                                              maxForce 20.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "panda_finger::left_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation 0.000000 0.000000 0.058400
+                                                            children [
+                                                              DEF finger_visual CadShape {
+                                                                url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/visual/finger.dae"
+                                                              }
+                                                            ]
+                                                            name "panda_leftfinger"
+                                                            boundingObject DEF finger Mesh {
+                                                              url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/collision/finger.stl"
+                                                            }
+                                                            physics Physics {
+                                                            }
+                                                          }
+                                                        }
+                                                        SliderJoint {
+                                                          jointParameters JointParameters {
+                                                            axis 0.000000 -1.000000 0.000000
+                                                          }
+                                                          device [
+                                                            LinearMotor {
+                                                              name "panda_finger::right"
+                                                              maxVelocity 0.2
+                                                              maxPosition 0.04
+                                                              maxForce 20.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "panda_finger::right_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation 0.000000 0.000000 0.058400
+                                                            children [
+                                                              Pose {
+                                                                rotation -0.000000 0.000000 1.000000 3.141593
+                                                                children [
+                                                                  USE finger_visual
+                                                                ]
+                                                              }
+                                                            ]
+                                                            name "panda_rightfinger"
+                                                            boundingObject Pose {
+                                                              rotation -0.000000 0.000000 1.000000 3.141593
+                                                              children [
+                                                                USE finger
+                                                              ]
+                                                            }
+                                                            physics Physics {
+                                                            }
+                                                          }
+                                                        }
+                                                      ]
+                                                      name "panda_hand"
+                                                      boundingObject DEF hand Mesh {
+                                                        url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/collision/hand.stl"
+                                                      }
+                                                      physics Physics {
+                                                      }
+                                                    }
+                                                  ]
+                                                  name "panda_link7"
+                                                  boundingObject DEF link7 Mesh {
+                                                    url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/collision/link7.stl"
+                                                  }
+                                                  physics Physics {
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "panda_link6"
+                                            boundingObject DEF link6 Mesh {
+                                              url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/collision/link6.stl"
+                                            }
+                                            physics Physics {
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "panda_link5"
+                                      boundingObject DEF link5 Mesh {
+                                        url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/collision/link5.stl"
+                                      }
+                                      physics Physics {
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "panda_link4"
+                                boundingObject DEF link4 Mesh {
+                                  url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/collision/link4.stl"
+                                }
+                                physics Physics {
+                                }
+                              }
+                            }
+                          ]
+                          name "panda_link3"
+                          boundingObject DEF link3 Mesh {
+                            url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/collision/link3.stl"
+                          }
+                          physics Physics {
+                          }
+                        }
+                      }
+                    ]
+                    name "panda_link2"
+                    boundingObject DEF link2 Mesh {
+                      url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/collision/link2.stl"
+                    }
+                    physics Physics {
+                    }
+                  }
+                }
+              ]
+              name "panda_link1"
+              boundingObject DEF link1 Mesh {
+                url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/collision/link1.stl"
+              }
+              physics Physics {
+              }
+            }
+          }
+        ]
+        name "panda_link0"
+        boundingObject DEF link0 Mesh {
+          url "/home/dexter/Programming/ros2_workspaces/Industrijska-Robotika-ROS2/ros2_ws/src/webots_ros2_panda/resource/meshes/collision/link0.stl"
+        }
+        physics Physics {
+        }
+      }
+    ]
+    name IS name
+  }
+}

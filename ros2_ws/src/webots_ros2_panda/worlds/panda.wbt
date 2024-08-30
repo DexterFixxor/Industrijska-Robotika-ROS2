@@ -1,0 +1,40 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/franka_emika/panda/protos/Panda.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.1511214048359905 -0.24145144659058432 -0.958573690406591 4.500748640345125
+  position 0.4989541424787608 -2.893384011785048 1.4846564630205066
+}
+DirectionalLight {
+}
+TexturedBackground {
+}
+RectangleArena {
+  floorSize 3 3
+}
+Panda {
+  hidden translation_1 -2.9130324481138614e-06 -8.799030151230344e-08 -0.00027605274586517403
+  hidden rotation_1 -0.03037909793787793 0.9995384486567739 8.080265866267734e-06 5.832423427591983e-05
+  hidden position_1_0 -4.809973062051717e-05
+  hidden rotation_2 0 0 -1 4.809972963713269e-05
+  hidden position_2_0 2.950887909345211e-05
+  hidden rotation_3 -0.9999999997823065 1.475444436626109e-05 1.4754439544584757e-05 1.5707960002176933
+  hidden position_3_0 4.780940975834975e-05
+  hidden rotation_4 0.999999999428565 -2.3904712682005052e-05 2.3904704870068218e-05 1.570796000571435
+  hidden position_4_0 -1.7708221969908422
+  hidden rotation_5 0.5661013204311444 0.5828933144128287 -0.5828933684808416 2.1113497542778643
+  hidden position_5_0 -1.6000218352351556
+  hidden rotation_6 -0.9999999998808056 -1.0917621144547178e-05 -1.0917617576904007e-05 1.5707960001191945
+  hidden position_6_0 1.599997701092088
+  hidden rotation_7 0.5661111143016753 -0.5828886807646882 0.5828884902796733 2.111335596943333
+  hidden position_7_0 0.7899999500714774
+  hidden rotation_8 0.8614191079395519 -0.35913591074668183 0.359135793382918 1.7194199259843013
+  hidden position_9_0 -7.965784857292753e-12
+  hidden position_9_1 7.965782961309153e-12
+  controller "<extern>"
+}
